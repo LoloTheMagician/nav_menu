@@ -1,0 +1,43 @@
+@import url('./fonts.css');
+@import url('./main.css');
+@import url('./normalize.css');
+@import url('./nav.css');
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./lenis.css');
+@import url('./button.css');
+
+:root {
+    --path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    /* -- FONTS -- */
+    --primary-font: "Familjen Grotesk", serif;
+    --secondary-font: "EB Garamond", serif;
+
+    /* -- COLORS -- */
+    --light-cream: #F3F3E0;
+    --sky-blue: #CBDCEB;
+    --cyan: #608BC1;
+    --blue: #133E87;
+    --black: #262626;
+
+    /* -- GAP -- */
+    --normal-gap: 25px;
+    --big-gap: calc((var(--normal-gap)) * 2);
+    --extra-big-gap: calc((var(--big-gap)) * 2);
+    --small-gap: calc(var(--normal-gap) / 2);
+    --extra-small-gap: calc(var(--small-gap) / 2);
+
+    /* -- FONT SIZES -- */
+
+    --small-size: 12px;
+    --medium-size: 16px;
+    --large-size: 48px;
+    --extra-large-size: 64px;
+    --largest-size: 96px;
+
+    
+    /* -- ASSIGN -- */
+    font-size: var(--small-size);
+    font-family: var(--primary-font);
+}

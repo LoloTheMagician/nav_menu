@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 300;
+    color: var(--blue);
+}
+
+body {
+    background-color: var(--sky-blue);
+    position: relative;
+
+    &> :is(nav, header, main) {
+        padding-inline: var(--small-gap);
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+
+button {
+    border: none;
+    outline: none;
+}

@@ -1,0 +1,10 @@
+.btn {
+    max-width: fit-content;
+    padding-inline: var(--small-gap);
+    padding-block: var(--extra-small-gap);
+    background-color: var(--blue);
+    color: var(--light-cream);
+    text-transform: uppercase;
+    font-size: var(--small-size);
+    margin-block-start: var(--normal-gap);
+}

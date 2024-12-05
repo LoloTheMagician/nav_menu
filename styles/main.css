@@ -1,0 +1,194 @@
+main {
+    padding-block-end: var(--big-gap);
+}
+
+.gallery {
+    display: grid;
+    gap: var(--small-gap);
+    grid-auto-rows: 35rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+    @media (width <=600px) {
+        column-gap: var(--extra-small-gap);
+        row-gap: var(--normal-gap);
+    }
+
+}
+
+.gallery__card {
+    container-type: inline-size;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--small-gap);
+
+
+    .gallery__card__image {
+        flex: 1;
+        background-color: var(--blue);
+    }
+
+    .gallery__card__title {
+        font-size: var(--medium-size);
+    }
+
+    ul {
+        container-type: inline-size;
+        display: flex;
+        flex-wrap: wrap;
+
+        /* Track CARD size and change LIs fonts size */
+        @container (width <=200px) {
+            font-size: 10px;
+        }
+    }
+
+    li:not(:last-child) {
+        margin-inline-end: var(--extra-small-gap);
+
+        &::after {
+            content: '-';
+            margin-inline-start: var(--extra-small-gap);
+        }
+
+        @container (width <=280px) {
+
+            &::after {
+                display: none;
+                content: '';
+
+            }
+        }
+    }
+}
+
+.about {
+    container: about__container / inline-size;
+
+    padding-block-start: var(--big-gap);
+
+    display: grid;
+    column-gap: var(--small-gap);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    .about__content {
+        grid-column-start: 3;
+        grid-row-start: 2;
+        display: flex;
+        flex-direction: column;
+
+        @container about__container (width <=775px) {
+            grid-column-start: initial;
+            grid-row-start: initial;
+        }
+
+        p {
+            word-wrap: break-word;
+
+            &:last-of-type {
+                margin-block-start: var(--extra-small-gap);
+            }
+        }
+
+        .about__content__button {
+            max-width: fit-content;
+            padding-inline: var(--small-gap);
+            padding-block: var(--extra-small-gap);
+            background-color: var(--blue);
+            color: var(--light-cream);
+            text-transform: uppercase;
+            font-size: var(--small-size);
+            margin-block-start: var(--normal-gap);
+        }
+    }
+
+    header {
+        grid-column: 1/ -1;
+    }
+
+    .about__subtitle,
+    .about__title {
+        text-transform: uppercase;
+    }
+
+    .about__title {
+        font-size: var(--large-size);
+    }
+
+    .about__subtitle {
+        grid-row: 2/3;
+        font-size: var(--medium-size);
+        padding-block-end: var(--normal-gap);
+
+        p {
+            @container about__container (width <=515px) {
+                max-width: 75%;
+            }
+        }
+    }
+}
+
+.main__image {
+    max-width: 100%;
+    height: 400px;
+    background-color: var(--blue);
+    margin: auto;
+    margin-block: var(--big-gap);
+
+    align-content: center;
+
+    h2 {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        gap: var(--normal-gap);
+    }
+
+    p {
+        color: var(--light-cream);
+        /* font-size: var(--large-size); */
+        font-size: clamp(1.5rem, -0.75rem + 7vw, var(--large-size));
+    }
+}
+
+.clients {
+    container: clients / inline-size;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: calc(35rem / 2);
+    gap: var(--small-gap);
+
+    .clients__card {
+        display: flex;
+        flex-direction: column;
+
+        header {
+            flex: 1;
+
+            @container clients (width <=515px) {
+                max-width: 75%;
+                flex: initial;
+            }
+        }
+
+        button {
+            align-self: end;
+
+            max-width: fit-content;
+            padding-inline: var(--small-gap);
+            padding-block: var(--extra-small-gap);
+            background-color: var(--blue);
+            color: var(--light-cream);
+            text-transform: uppercase;
+            font-size: var(--small-size);
+            margin-block-start: var(--normal-gap);
+        }
+    }
+
+    .clients__card__title {
+        font-size: var(--medium-size);
+        text-transform: uppercase;
+        margin-block-end: var(--small-gap);
+    }
+}

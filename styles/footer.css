@@ -1,0 +1,96 @@
+footer {
+    --height: calc(100vh / 1.25);
+
+    position: relative;
+    height: var(--height);
+
+    clip-path: var(--path);
+    background-color: var(--light-cream);
+
+    .footer__wrapper {
+        position: fixed;
+        bottom: 0;
+        height: var(--height);
+        width: 100%;
+
+        background-color: var(--light-cream);
+        padding-inline: var(--small-gap);
+
+        display: grid;
+    }
+}
+
+.footer__header {
+    max-width: 75%;
+    text-wrap: balance;
+    margin-block-start: var(--big-gap);
+
+    .footer__header__title {
+        /* font-size: clamp(4rem, 1.2rem + 12.8vw, var(--largest-size)); */
+        /* line-height: 85px; */
+        /* line-height: clamp(3.125rem, 0.1rem + 14vw, 6rem); */
+
+        font-size: var(--extra-large-size);
+        line-height: 55px;
+        text-transform: uppercase;
+        padding-block-end: var(--small-gap);
+    }
+
+    .footer__header__subtitle {
+        font-size: var(--large-size);
+        font-size: clamp(1.5rem, -0.75rem + 7vw, var(--large-size));
+
+        font-style: italic;
+        color: var(--cyan);
+    }
+
+    @media (width <=500px) {
+        max-width: fit-content;
+    }
+}
+
+.footer__misc {
+    font-size: var(--medium-size);
+    padding-block-end: var(--small-gap);
+    align-self: flex-end;
+
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--normal-gap);
+    row-gap: var(--small-gap);
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @media (width <=800px) {
+        font-size: var(--small-size);
+    }
+
+    .creator {
+        font-style: italic;
+        text-decoration: underline;
+
+        &:hover {
+            color: var(--cyan);
+        }
+    }
+}
+.footer__content__socialMedia>ul {
+    display: flex;
+    gap: var(--normal-gap);
+
+    text-transform: uppercase;
+    text-align: end;
+
+    li:first-of-type {
+        color: var(--cyan);
+    }
+
+    @media (width <=600px) {
+        gap: var(--small-gap);
+    }
+
+    @media (width <=400px) {
+        flex-direction: column;
+        text-align: start;
+    }
+}

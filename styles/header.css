@@ -1,0 +1,30 @@
+
+.body__header {
+    max-width: 800px;
+    padding-block-start: var(--extra-big-gap);
+    padding-block-end: var(--big-gap);
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--small-gap);
+
+
+    .body__header__title {
+        line-height: 55px;
+        font-size: var(--extra-large-size);
+    }
+
+    .body__header__title__intro {
+        font-weight: lighter;
+    }
+
+    .body__header__title__keyword {
+        font-weight: 900;
+    }
+
+    .body__header__subtitle {
+        display: flex;
+        flex-direction: column;
+    }
+}
