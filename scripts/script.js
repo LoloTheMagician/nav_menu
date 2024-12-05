@@ -1,4 +1,4 @@
-import Lenis from "lenis";
+import Lenis from "../node_modules/lenis/dist/lenis.mjs";
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -144,10 +144,10 @@ const footerTl = gsap.timeline({
         // gsap.to('main', {backgroundColor: 'red'})
     },
     onComplete: () => {
-        gsap.to('main', {backgroundColor: 'red'})
+        gsap.to('main', { backgroundColor: 'red' })
     },
     onReverseComplete: () => {
-        gsap.to('main', {backgroundColor: 'transparent'})
+        gsap.to('main', { backgroundColor: 'transparent' })
     }
 })
 
