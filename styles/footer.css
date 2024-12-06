@@ -1,5 +1,6 @@
 footer {
-    --height: calc(100vh / 1.25);
+    --divider: 1.125;
+    --height: calc(100vh / var(--divider));
 
     position: relative;
     height: var(--height);
@@ -74,6 +75,7 @@ footer {
         }
     }
 }
+
 .footer__content__socialMedia>ul {
     display: flex;
     gap: var(--normal-gap);

@@ -1,5 +1,5 @@
 main {
-    padding-block-end: var(--big-gap);
+    padding-block-end: var(--extra-big-gap);
 }
 
 .gallery {

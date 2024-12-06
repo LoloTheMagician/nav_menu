@@ -1,4 +1,3 @@
-
 .body__header {
     max-width: 800px;
     padding-block-start: var(--extra-big-gap);
@@ -12,7 +11,8 @@
 
     .body__header__title {
         line-height: 55px;
-        font-size: var(--extra-large-size);
+        /* font-size: var(--extra-large-size); */
+        font-size: clamp(3rem, 1.6rem + 6.4vw, var(--extra-large-size));
     }
 
     .body__header__title__intro {

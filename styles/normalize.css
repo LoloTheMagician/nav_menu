@@ -7,12 +7,16 @@
 }
 
 body {
+
     background-color: var(--sky-blue);
     position: relative;
+
+    overflow: hidden;
 
     &> :is(nav, header, main) {
         padding-inline: var(--small-gap);
     }
+
 }
 
 ul {
