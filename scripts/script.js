@@ -31,6 +31,43 @@ gsap.ticker.lagSmoothing(0);
 requestAnimationFrame(lenis.raf);
 
 
+
+const tl_intro = gsap.timeline({
+
+})
+
+
+
+tl_intro
+    .from('.body__header', {
+        delay: .25,
+        x: 100,
+        opacity: 0,
+        ease: 'back.out',
+        duration: .75
+    })
+    .fromTo('body> nav > *', {
+        y: -25,
+        opacity: 0,
+    }, {
+        ease: 'back.out',
+        stagger: .25,
+        y: 0,
+        opacity: 1,
+    })
+    .fromTo('body > main .gallery .gallery__card', {
+        y: 150,
+        opacity: 0,
+    }, {
+        y: 0,
+        opacity: 1,
+        ease: 'back.out',
+        stagger: .125,
+        duration: .75
+
+    })
+
+
 const tl_image = gsap.timeline({
     // onComplete: () => console.log('COMPLETE!'),
     scrollTrigger: {
@@ -129,30 +166,35 @@ tl
         ease
     })
 
-const lg = () => console.log('PEPE')
+
+// const tl_main = gsap.timeline({
+//     duration: .125,
+//     scrollTrigger: {
+//         trigger: '#footer',
+//         start: 'start center',
+//         end: 'center center',
+//         markers: true,
+
+//         onLeaveBack: () => tl_main.reverse()
+//     }
+// })
+
+// tl_main.to('main', {
+//     ease: 'sine ',
+//     opacity: 0,
+// })
 
 const footerTl = gsap.timeline({
     scrollTrigger: {
         trigger: '#footer',
         end: '25% center',
-        markers: true,
         scrub: 1,
     },
-    onRepeat: () => {
-        console.log('STARTED TIMELINE FOOTER')
-        // gsap.to('main:is(article::last-of-type)', { opacity: 0 })
-        // gsap.to('main', {backgroundColor: 'red'})
-    },
-    onComplete: () => {
-        gsap.to('main', { backgroundColor: 'red' })
-    },
-    onReverseComplete: () => {
-        gsap.to('main', { backgroundColor: 'transparent' })
-    }
 })
 
 
-footerTl.from('.footer__wrapper', {
-    y: 200,
-    ease: 'sine.in',
-})
+footerTl
+    .from('.footer__wrapper', {
+        y: 200,
+        ease: 'sine.in',
+    })
