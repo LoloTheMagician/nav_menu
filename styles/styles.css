@@ -36,8 +36,16 @@
     --extra-large-size: 64px;
     --largest-size: 96px;
 
-    
+
     /* -- ASSIGN -- */
-    font-size: var(--small-size);
+    /* font-size: var(--small-size); */
     font-family: var(--primary-font);
+}
+
+body {
+    font-size: var(--small-size);
+
+    @media (width >=1280px) {
+        font-size: var(--medium-size);
+    }
 }
