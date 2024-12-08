@@ -13,6 +13,9 @@ main {
         row-gap: var(--normal-gap);
     }
 
+    @media (width >=1280px) {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 
 .gallery__card {
@@ -72,6 +75,8 @@ main {
     column-gap: var(--small-gap);
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
+
+
     .about__content {
         grid-column-start: 3;
         grid-row-start: 2;
@@ -81,6 +86,10 @@ main {
         @container about__container (width <=775px) {
             grid-column-start: initial;
             grid-row-start: initial;
+        }
+
+        @media (width >=1280px) {
+            grid-column: 4 / -1;
         }
 
         p {
