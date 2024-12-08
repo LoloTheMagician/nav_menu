@@ -51,7 +51,7 @@ footer {
 
     @media (width <=500px) {
         max-width: fit-content;
-        margin-block-start: var(--extra-big-gap);
+        margin-block-start: calc(var(--extra-big-gap) * 2);
 
     }
 }
