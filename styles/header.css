@@ -9,10 +9,20 @@
     gap: var(--small-gap);
 
 
+    @media (width >=1280px) {
+        max-width: max(50%, min(100%, 1200px));
+    }
+
     .body__header__title {
         line-height: 55px;
-        /* font-size: var(--extra-large-size); */
         font-size: clamp(3rem, 1.6rem + 6.4vw, var(--extra-large-size));
+
+        @media (width >=1280px) {
+            --largest-size: 128px;
+            font-size: var(--largest-size);
+            line-height: 125px;
+
+        }
     }
 
     .body__header__title__intro {
