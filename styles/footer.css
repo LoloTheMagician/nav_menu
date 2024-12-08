@@ -21,7 +21,7 @@ footer {
     }
 
     @media (width <=600px) {
-        --divider: 1.5;
+        --divider: 1.125;
     }
 }
 
