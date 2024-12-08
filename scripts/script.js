@@ -1,4 +1,4 @@
-import Lenis from "leins";
+import Lenis from "lenis";
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -6,16 +6,16 @@ gsap.registerPlugin(ScrollTrigger)
 // Initialize a new Lenis instance for smooth scrolling
 const lenis = new Lenis({
     lerp: 0.125,
-    // easing: (x) => {
-    //     return 1 - Math.pow(1 - x, 3);
-    // },
+    syncTouch: true
 });
 
 // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
 lenis.on('scroll', () => {
     ScrollTrigger.update
-    // console.log('SCROLL!')
 });
+
+
+window.ontouchstart = () => console.log(lenis.isTouching)
 
 // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
 // This ensures Lenis's smooth scroll animation updates on each GSAP tick
@@ -31,11 +31,7 @@ gsap.ticker.lagSmoothing(0);
 requestAnimationFrame(lenis.raf);
 
 
-
-const tl_intro = gsap.timeline({
-
-})
-
+const tl_intro = gsap.timeline()
 
 
 tl_intro
@@ -69,7 +65,6 @@ tl_intro
 
 
 const tl_image = gsap.timeline({
-    // onComplete: () => console.log('COMPLETE!'),
     scrollTrigger: {
         trigger: '.main__image',
         start: '-75% center',
