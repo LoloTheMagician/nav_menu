@@ -49,10 +49,9 @@ footer {
         color: var(--cyan);
     }
 
-    @media (width <=500px) {
+    @media (width <=600px) {
         max-width: fit-content;
         margin-block-start: calc(var(--extra-big-gap) * 2);
-
     }
 }
 
