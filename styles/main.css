@@ -135,10 +135,11 @@ main {
 
     .about__subtitle {
         grid-row: 2/3;
-        font-size: var(--medium-size);
         padding-block-end: var(--normal-gap);
 
-        p {
+        h3 {
+        font-size: var(--medium-size);
+
             @container about__container (width <=515px) {
                 max-width: 75%;
             }
