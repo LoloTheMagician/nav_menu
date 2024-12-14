@@ -162,7 +162,7 @@ main {
         gap: var(--normal-gap);
     }
 
-    p {
+    .main__image__word {
         color: var(--light-cream);
         /* font-size: var(--large-size); */
         font-size: clamp(1.5rem, -0.75rem + 7vw, var(--large-size));

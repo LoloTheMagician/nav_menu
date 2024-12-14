@@ -1,12 +1,12 @@
-import Lenis from "lenis";
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "lenis";
 
 gsap.registerPlugin(ScrollTrigger)
 // Initialize a new Lenis instance for smooth scrolling
 const lenis = new Lenis({
     lerp: 0.125,
-    syncTouch: true
+    syncTouch: true,
 });
 
 // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
@@ -80,7 +80,7 @@ tl_image
         scaleX: .5,
         ease: 'sine.in',
     })
-    .from('.main__image h2 p', {
+    .from('.main__image h2 .main__image__word', {
         opacity: 0,
         y: 50,
         stagger: .25,
