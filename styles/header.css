@@ -36,5 +36,6 @@
     .body__header__subtitle {
         display: flex;
         flex-direction: column;
+        font-size: 12px;
     }
 }
