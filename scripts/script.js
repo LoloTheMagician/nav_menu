@@ -87,49 +87,6 @@ tl_image
     })
 
 
-// const tl_nav = gsap.timeline()
-
-// tl_nav.to('nav', {
-//     translateY: '-100%',
-//     ease: 'sine',
-
-//     scrollTrigger: {
-//         trigger: 'footer',
-//         start: 'start center',
-//         end: 'center center',
-//         markers: true,
-//         scrub: true,
-//     },
-
-//     // onComplete: () => {
-//     //     gsap.to('footer', {
-//     //         duration: 0.25,
-//     //         ease: 'sine',
-//     //         backgroundColor: 'transparent',
-//     //     })
-//     // },
-//     // onReverseComplete: () => gsap.to('footer', {
-//     //     backgroundColor: '#608BC1',
-//     // })
-// })
-
-// const options = {
-//     root: null,
-//     rootMargin: '0px',
-//     threshold: 0.25
-// };
-
-// const observer = new IntersectionObserver((e) => {
-//     const intersection = e.at(0)
-//     const { isIntersecting } = intersection
-//     if (isIntersecting) {
-//         console.info(`INSIDE ${intersection.target.tagName}`, intersection.boundingClientRect)
-
-//     }
-// }, options)
-
-// observer.observe(document.querySelector('#footer'))
-
 const [navYMovement, duration, ease] = [20, .15, 'sine.in']
 const animProps = {
     y: navYMovement,
@@ -148,7 +105,7 @@ const tl = gsap.timeline({
 })
 
 tl
-    .to('body > nav h2', {
+    .to('body > nav .nav_title', {
         ...animProps
     })
     .to('body > nav ul li', {
